@@ -1,5 +1,6 @@
 {
   "name": "harunbleech/github-actions",
+  "description": "testing actions",
   "require": {
     "kraken-io/kraken-php": "^1.6",
     "a5hleyrich/wp-background-processing": "^1.0"
