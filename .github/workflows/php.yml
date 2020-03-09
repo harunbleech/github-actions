@@ -39,6 +39,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Run Linting and Tests
+    - name: Run Linting
       run: npm lint
+
+    - name: Run Tests
       run: npm test
