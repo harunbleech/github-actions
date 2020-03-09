@@ -42,7 +42,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Use PHP ${{ matrix.php-version }}
-      uses: actions/setup-php@master
+      uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-version }}
 
