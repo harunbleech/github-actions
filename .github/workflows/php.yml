@@ -28,8 +28,10 @@ jobs:
     - name: Validate composer.json and composer.lock
       run: composer validate
 
-    - name: Install dependencies
+    - name: Install composer dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Install node dependencies
       run: npm install
 
     - name: Use Node.js ${{ matrix.node-version }}
