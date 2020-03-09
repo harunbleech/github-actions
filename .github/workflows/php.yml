@@ -15,12 +15,13 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.operating-system }}
 
     strategy:
       matrix:
+        operating-system: [ ubuntu-latest, windows-latest ]
         node-version: [10.x]
-        php-version: [5.6, 7.x]
+        php-version: ['5.6', 7.x]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
