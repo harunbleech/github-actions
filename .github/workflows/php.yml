@@ -19,13 +19,12 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [10.x]
         php-version: [5.6, 7.x]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
 
     - name: Validate composer.json and composer.lock
       run: composer validate
@@ -37,8 +36,13 @@ jobs:
       run: npm install
 
     - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+
+    - name: Use PHP ${{ matrix.php-version }}
+      uses: actions/setup-php@master
+      with:
         php-version: ${{ matrix.php-version }}
 
     - run: npm run lint
