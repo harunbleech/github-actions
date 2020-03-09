@@ -27,15 +27,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate
-
-    - name: Install composer dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
-
-    - name: Install node dependencies
-      run: npm install
-
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -45,6 +36,15 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-version }}
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate
+
+    - name: Install composer dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Install node dependencies
+      run: npm install
 
     - run: npm run lint
     - run: npm test
