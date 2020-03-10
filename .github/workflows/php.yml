@@ -19,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        operating-system: [ windows-latest ]
+        operating-system: [ ubuntu-latest ]
         node-version: [ 12 ]
         php-version: [ 5.6, 7.2, 7.3 ]
 
