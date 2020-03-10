@@ -12,7 +12,7 @@
     "phpcompatibility/phpcompatibility-wp": "^2.1",
     "wp-coding-standards/wpcs": "^2.2",
     "brain/monkey": "^2.4",
-    "phpunit/phpunit": "^5"
+    "phpunit/phpunit": "^8"
   },
   "config": {
     "vendor-dir": "vendor"
