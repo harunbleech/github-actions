@@ -11,7 +11,7 @@
     "build": "cross-env && npm run setup && npm run lint && npm run test && NODE_ENV=production webpack",
     "setup": "composer config vendor-dir includes/vendor && composer install --no-dev && composer config vendor-dir vendor",
     "lint": "npm run lint:scripts && npm run lint:styles && npm run lint:php",
-    "lint:scripts": "eslint 'assets/js/src/'",
+    "lint:scripts": "eslint 'assets\js/src\'",
     "lint:styles": "stylelint 'assets/css/src/'",
     "lint:php": "php vendor/bin/phpcs --standard=phpcs.xml",
     "lint:scripts:fix": "eslint 'assets/js/src/' --fix",
