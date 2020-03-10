@@ -46,5 +46,7 @@ jobs:
     - name: Install node dependencies
       run: npm install
 
-    - run: npm run lint
+    - run: npm run lint:php
+    - run: npm run lint:scripts
+    - run: npm run lint:styles
     # - run: npm test
