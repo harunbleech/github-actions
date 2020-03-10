@@ -13,7 +13,7 @@
     "lint": "npm run lint:scripts && npm run lint:styles && npm run lint:php",
     "lint:scripts": "eslint './assets/js/src/'",
     "lint:styles": "stylelint './assets/css/src/'",
-    "lint:php": "vendor/bin/phpcs --standard=phpcs.xml",
+    "lint:php": "php vendor/bin/phpcs --standard=phpcs.xml",
     "lint:scripts:fix": "eslint './assets/js/src/' --fix",
     "lint:styles:fix": "stylelint './assets/css/src/' --fix",
     "lint:php:fix": "vendor/bin/phpcbf --standard=phpcs.xml",
